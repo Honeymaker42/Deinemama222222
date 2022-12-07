@@ -3,11 +3,12 @@
 #include "thread"
 #include "../Header/memory.h"
 #include <iostream>
+#include <Windows.h>
 namespace offset
 {
-	constexpr ::std::ptrdiff_t dwLocalPlayer = 0xDE7964;
-	constexpr ::std::ptrdiff_t dwEntityList = 0x4DFCE74;
-	constexpr ::std::ptrdiff_t dwForceAttack = 0x322AC7C;
+	constexpr ::std::ptrdiff_t dwLocalPlayer = 0xDE8964;
+	constexpr ::std::ptrdiff_t dwEntityList = 0x4DFDE84;
+	constexpr ::std::ptrdiff_t dwForceAttack = 0x322BC8C;
 
 
 	constexpr ::std::ptrdiff_t m_iHealth = 0x100;
@@ -61,11 +62,13 @@ int main()
 			memory.Read<std::int32_t>(localPlayer + offset::m_iTeamNum))
 			continue;
 
+		
+
 		memory.Write<std::uintptr_t>(client + offset::dwForceAttack, 6);
 		std::this_thread::sleep_for(std::chrono::milliseconds(20));
 		memory.Write<std::uintptr_t>(client + offset::dwForceAttack, 4);
 
-
+		
 
 
 
