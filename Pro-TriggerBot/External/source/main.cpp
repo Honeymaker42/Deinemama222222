@@ -6,9 +6,9 @@
 #include <Windows.h>
 namespace offset
 {
-	constexpr ::std::ptrdiff_t dwLocalPlayer = 0xDE8964;
-	constexpr ::std::ptrdiff_t dwEntityList = 0x4DFDE84;
-	constexpr ::std::ptrdiff_t dwForceAttack = 0x322BC8C;
+	constexpr ::std::ptrdiff_t dwLocalPlayer = 0xDEA964;
+	constexpr ::std::ptrdiff_t dwEntityList = 0x4DFFF14;
+	constexpr ::std::ptrdiff_t dwForceAttack = 0x322DD10;
 
 
 	constexpr ::std::ptrdiff_t m_iHealth = 0x100;
